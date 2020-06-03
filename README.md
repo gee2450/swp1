@@ -1,2 +1,2 @@
 # 20203108	 Minji Yun
-# Kookmin Univ. SW
+# Kookmin Univ. Computer Science
