@@ -9,7 +9,8 @@ def application(environ, start_response):
 	try:
 		a, b = int(a), int(b)
 		sum, mul = a+b, a*b
-	except ValueError: sum, mul = -1, -1
+	except ValueError:
+		sum, mul = "Error", "Error"
 	response_body = html % {
 		'sum': sum,
 		'mul': mul,
