@@ -5,13 +5,14 @@ def application(environ, start_response):
 	d = parse_qs(environ['QUERY_STRING'])
 	a = d.get('a', [''])[0]
   	b = d.get('b', [''])[0]
-	if '' not in [a,b]:
+	sum, mul = 0, 0
+	try:
 		a, b = int(a), int(b)
-	if a=='': a=0
-	if b=='': b=0
+		sum, mul = a+b, a*b
+	except ValueError: sum, mul = -1, -1
 	response_body = html % {
-		'sum': a+b,
-		'mul': a*b,
+		'sum': sum,
+		'mul': mul,
 	}
 	start_response('200 OK', [
 		('Content-Type', 'text/html'),
