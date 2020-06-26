@@ -1,7 +1,7 @@
 html = b"""
 <html>
 	<body>
-		<form action="">
+		<form action="" autocomplete="off">
 			a : <input type="float" name="a"><br>
 			b : <input type="float" name="b"><br>
 			<input type="submit">
