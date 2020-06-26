@@ -6,7 +6,9 @@ def application(environ, start_response):
 	a = d.get('a', ['0'])[0]
   	b = d.get('b', ['0'])[0]
 	try:
-		a, b = int(a), int(b)
+		if a.isdigit() and b.isdigit():
+			a, b = int(a), int(b)
+		else: a, b = float(a),float(b)
 		sum, mul = a+b, a*b
 	except ValueError:
 		sum, mul = "Error", "Error"

@@ -2,8 +2,8 @@ html = b"""
 <html>
 	<body>
 		<form action="">
-			a : <input type="number" name="a"><br>
-			b : <input type="number" name="b"><br>
+			a : <input type="float" name="a"><br>
+			b : <input type="float" name="b"><br>
 			<input type="submit">
 		</form>
 		<p>
